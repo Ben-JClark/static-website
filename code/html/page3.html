@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet">
+        <title>http and https</title>
+    </head>
+    <body>
+        <!--The first grid start-->
+        <div class="grid_main">
+            <div class="header_pannel" id="header_pannel1"><h1>What is a request?</h1></div>
+            <!--The centre pannel of the grid where the main contents are displayed-->
+            <div class="centre_pannel" id="centre_pannel1"><br>
+                <p>
+                    In the previous page we discussed how a webpage is downloaded, and that requests are made to<br>
+                    download the page contents on our device from the server. The things that can be requested<br>
+                    are hypertext documents, images, and other files. Now for the client to request these files,<br>
+                    the client will click on a link and the web browser will generate and send some text to the<br>
+                    server, this text would contain a get request method. 
+                </p>
+                <h2>Types of HTTP request methods</h2>
+                
+
+
+                <form>
+                <table>
+                    <caption>Properties of request methods</caption>
+                    <thead>
+                        <tr>
+                            <th>Request method</th><th>Response has body</th><th>Request has body</th><th>Safe</th><th>Idempotent</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>GET</td><td>Optional</td><td>Yes</td><td>Yes</td><td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>HEAD</td><td>Optional</td><td>No</td><td>Yes</td><td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td>
+                        </tr>
+                        <tr>
+                            <td>PUT</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE</td><td>Optional</td><td>Yes</td><td>No</td><td>Yes</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>DELETE</td><td>Optional</td><td>Yes</td><td>No</td><td>Yes</td>
+                        </tr>
+                    </tbody>                                         
+                </table>
+                </form>
+
+
+                <p>
+                    <span class="link">
+                        <a href="https://en.wikipedia.org/wiki/HTTPS">Click here</a>
+                    </span>
+                     to learn more about the table shown.
+                </p>
+                <h2>Two main types of request methods</h2>
+                <!--INDENTATION HERE-->
+                <p>
+                    GET request method. This is usually used to get a resource, these resources can be<br>
+                    hypertext documents, images, and so on, these are identified by the URI. 
+                </p>
+                <!--INDENTATION HERE-->                
+                <p>
+                    POST request method. This modifies an entity with existing URI on the server<br>
+                    according to the data in the response body. An example would be when posting<br>
+                    a comment to an article.
+                </p>
+
+
+                <h2>
+                    Format of a Client GET request
+                </h2>
+                <p class="code">
+                    &it;request line&gt;<br>
+                    &it;request header fields&gt;<br>
+                    Empty line<br>
+                    &it;(optional) request body&gt;
+                </p>
+                <p>
+                    example of a Client GET request
+                </p>
+                <!--CHANGE TO COURIER NEW FONT AND CHANGE BACKGROUND-->
+                <p class="code">
+                    GET / HTTP/1.1<br>
+                    HOST: www.example.com
+                </p>
+                <p>
+                    Example is provided from a Wikipedia web page about HTTP, 
+                    <span class="link">
+                        <a href="https://en.wikipedia.org/wiki/HTTPS">Click here</a>
+                    </span>
+                     for more information. 
+                </p>
+
+
+                <h2>
+                    Format of a Server response
+                </h2>
+                <p class="code">
+                    &it;status line&gt;<br>
+                    &it;response header fields&gt;<br>
+                    Empty line<br>
+                    &it;(optional) message body&gt;
+                </p>
+                <p>
+                    Example of a successful Server response
+                </p>
+                <!--CHANGE TO COURIER NEW FONT AND CHANGE BACKGROUND-->
+                <p class="code">
+                    HTTP/1.1 200 OK<br>
+                    Date: Mon, 23 May 2005 22:38:34 GMT<br>
+                    Content-Type: text/html; charset=UTF-8<br>
+                    Content-Length: 155<br>
+                    Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT<br>
+                    Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)<br>
+                    ETag: "3f80f-1b6-3e1cb03b"<br>
+                    Accept-Ranges: bytes<br>
+                    Connection: close<br>
+
+                    &it;html&gt;<br>
+                    &it;head&gt;<br>
+                    &it;title&gt; An Example Page &it;/title&gt;<br>
+                    &it;/head&gt;<br>
+                    &it;body&gt;<br>
+                    &it;p&gt; Hello World, this is a very simple HTML document. &it;/p&gt;<br>
+                    &it;/body&gt;<br>
+                    &it;/html&gt;
+                </p>
+                <p>
+                    Example is provided from a Wikipedia web page about HTTP, 
+                    <span class="link">
+                        <a href="https://en.wikipedia.org/wiki/HTTPS">Click here</a>
+                    </span>
+                     for more information. 
+                </p>
+
+
+                <h2>
+                    Status and error codes
+                </h2>
+                <p>
+                    The previous examples of Client requests and Server responses had a status code<br>
+                    in their request and respone line, below I have listed some codes and their meaning.
+                </p>
+                <ul>
+                    <li class="list">Informal 1XX</li>
+                    <li class="list">Successful 2XX</li>
+                    <li class="list">Redirection 3XX</li>
+                    <li class="list">Client Error 4XX</li>
+                    <li class="list">Server Error 5XX</li>
+                </ul>
+                
+                <!--Display an image of a 404 error in three differnt sizes-->
+                <picture class="image">
+                    <source media="(max-width:600px)" srcset="../media/pageError400.png"> <!--400px to 600px, for small phones-->
+                    <source media="(max-width:800px)" srcset="../media/pageError600.png"> <!--601px to 800px, for narrow windows-->
+                    <source media="(min-width:801px)" srcset="../media/pageError800.png"> <!--801px and more, for 1080p monitors-->
+                    <img src="../media/pageError800.png" id="insecureConnection_url" alt="An example of a Not Secure statement on an HTTP webpage.">
+                </picture>    
+                <h2>The Client and Server</h2>
+                <p>
+                    The image above is an example of an incorrct link that gives us a <span style="color:red">Client 404 error</span>.<br>
+                    <span class="link">
+                        <a href="https://www.stuff.co.nz/test/">Click here</a>
+                    </span>
+                     to visit the web page and experence the error yourself! <!--INSERT LINK OF WEB PAGE ERROR EXAMPLE-->
+                </p>
+                <h3>
+                    Navigation
+                </h3>
+                <p>
+                    <a href="../index.html">[Page 1]</a>
+                     - 
+                    <a href="page2.html">[Page 2]</a>
+                     - 
+                     <span style="color:white">[Page 3]</span>
+                     - 
+                    <a href="page4.html">[Page 4]</a>
+                </p>
+            </div>
+            <div class="left_pannel"></div>
+            <div class="right_pannel"></div>
+        </div>
+    </body>
+</html>

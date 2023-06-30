@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet">
+        <title>http and https</title>
+    </head>
+    <body>
+        <!--The first grid start-->
+        <div class="grid_main">
+            <div class="header_pannel" id="header_pannel1"><h1>When to use GET and POST?</h1></div>
+            <!--The centre pannel of the grid where the main contents are displayed-->
+            <div class="centre_pannel" id="centre_pannel1"><br>
+                <p>
+                    Before we said that a GET request method is usually used to get read only data, this would<br>
+                    be done without modifying the server. We then said a POST request method is used when we<br>
+                    want to modify a server. We can also put these request methods into categories to better<br>
+                    understand which one we should use.
+                </p>
+                <h2>Safe methods</h2>
+                <p>
+                    They are the methods that are intended for information retrieval only. They are GET, HEAD,<br> 
+                    OPTIONS and TRACE. 
+                </p>          
+                <h2>Side effect methods</h2>
+                <p>
+                    These methods have side effects on the server and can modify files and send emails.<br> 
+                    These methods are POST, PUT, DELETE, PATCH. 
+                </p>
+                <h2>Idempotent methods</h2>
+                <p>
+                    Are methods that can be called multiple times with identical requests with only the first<br>
+                    successful one making an effect. These methods are PUT, DELETE, and all the safe methods.<br>
+                    POST can be idempotent depending on what it does. Below is an example of when you would<br>
+                    want to use an idempotent POST method.
+                </p>
+                
+                <!--Display an image of facebooks sign up web page in three differnt sizes-->
+                <picture class="image">
+                    <source media="(max-width:600px)" srcset="../media/facebookSignUp400.png"> <!--400px to 600px, for small phones-->
+                    <source media="(max-width:800px)" srcset="../media/facebookSignUp600.png"> <!--601px to 800px, for narrow windows-->
+                    <source media="(min-width:801px)" srcset="../media/facebookSignUp800.png"> <!--801px and more, for 1080p monitors-->
+                    <img src="../media/facebookSignUp800.png" id="facebook_signup_image" alt="An image of facebooks sign up web page.">
+                </picture>    
+                <p>
+                    This is an example of a common sign-up form. If a client continuously clicked submit,<br>
+                    then the server should only receive the first successful POST request method. Therefor<br>
+                    this POST method would be idempotent. If the POST method was not configured to be<br>
+                    idempotent, then the server would receive multiple forms which could cause an issue.<br>
+                    I have also implemented a form below so you can try clicking submit multiple times.
+
+                </p>
+                <h3>
+                    Navigation
+                </h3>
+                <p>
+                    <a href="../index.html">[Page 1]</a>
+                     - 
+                    <a href="page2.html">[Page 2]</a>
+                     - 
+                    <a href="page3.html">[Page 3]</a>
+                     - 
+                    <span style="color:white">[Page 4]</span>
+                </p>
+            </div>
+            <div class="left_pannel"></div>
+            <div class="right_pannel"></div>
+        </div>
+    </body>
+</html>

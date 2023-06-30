@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet">
+        <title>http and https</title>
+    </head>
+    <body>
+        <!--The first grid start-->
+        <div class="grid_main">
+            <div class="header_pannel" id="header_pannel1"><h1>How is a web page downloaded?</h1></div>
+            <!--The centre pannel of the grid where the main contents are displayed-->
+            <div class="centre_pannel" id="centre_pannel1"><br>
+                <p>
+                    To awnser this I will be using the following webpage: 
+                    <span class="link">
+                        <a href="https://en.wikipedia.org/wiki/Morty_Smith">https://en.wikipedia.org/wiki/Morty_Smith</a>
+                    </span>
+                </p>
+                
+                <!--An image of Mortys Wikipedia page in three differnt sizes-->
+                <picture class="image">
+                    <source media="(max-width:600px)" srcset="../media/mortyWebpage400.png"> <!--400px to 600px, for small phones-->
+                    <source media="(max-width:800px)" srcset="../media/mortyWebpage600.png"> <!--601px to 800px, for narrow windows-->
+                    <source media="(min-width:801px)" srcset="../media/mortyWebpage800.png"> <!--801px and more, for 1080p monitors-->
+                    <img src="../media/mortyWebpage800.png" id="morty_webpage_image" alt="An image of Morty's Wikipedia webpage.">
+                </picture>   
+                <p>
+                    This webpage is downloaded over a connection between a client and the sever hosting the webpage,<br>
+                     in this case it would be Wikipedia&apos;s server. The content being downloaded would be hypertext<br>
+                     documents, images, and other files. 
+                </p>
+                <p>
+                    By using chromes tools, we can see a sequence of requests, and since we are using the HTTPS<br>
+                    protocol, they are HTTPS requests. Below is an image showing 18 requests being made between my<br>
+                    device (a windows computer) and Wikipedia&apos;s server.
+                </p>
+                <!--Display an image of chrome's developer tools for a web page in three differnt sizes-->
+                <picture class="image">
+                    <source media="(max-width:600px)" srcset="../media/websiteRequests400.png"> <!--400px to 600px, for small phones-->
+                    <source media="(max-width:800px)" srcset="../media/websiteRequests600.png"> <!--601px to 800px, for narrow windows-->
+                    <source media="(min-width:801px" srcset="../media/websiteRequests800.png"> <!--801px and more, for 1080p monitors-->
+                    <img src="../media/websiteRequests800.png" id="chrome_tools_image" alt="An example of 18 different HTTPS requests.">
+                </picture>              
+                <p>
+                    If we select the Morty_Smith.png request we can see where the website gets the image from,<br>
+                    in this case the image is stored on Wikipedia&apos;s server. If we go to this URL it takes us to<br>
+                     the file Morty_Smith.png on Wikipedia&apos;s server, this will be presented as a blank webpage<br>
+                     that only shows an image of Morty.
+                </p>
+                <p>
+                    The other requests we can see are images for the page logo and page symbols, there are also PHP<br>
+                    files which are used to generate HTML code, this is what webpages runs on.
+                </p>
+                <h3>
+                    Navigation
+                </h3>
+                <p>
+                    <a href="../index.html">[Page 1]</a>
+                     - 
+                     <span style="color:white">[Page 2]</span>
+                     - 
+                    <a href="page3.html">[Page 3]</a>
+                     - 
+                    <a href="page4.html">[Page 4]</a>
+                </p>
+            </div>
+            <div class="left_pannel"></div>
+            <div class="right_pannel"></div>
+        </div>
+    </body>
+</html>

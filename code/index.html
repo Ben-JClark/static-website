@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./styles/style.css" rel="stylesheet">
+        <title>http and https</title>
+    </head>
+    <body>
+        <!--The first grid start-->
+        <div class="grid_main">
+            <div class="header_pannel" id="header_pannel1"><h1>What is HTTP and HTTPS?</h1></div>
+            <!--The centre pannel of the grid where the main contents are displayed-->
+            <div class="centre_pannel" id="centre_pannel1"><br>
+                <p>HTTP and HTTPS are a protocol at the start of a URL</p>
+                <h2>What is a URL?</h2>
+                <p>
+                    URLs are a type of URI. A URI is a Uniform Reousrce Identifier which is a line of text<br> 
+                    that identifies an online resource like a web page. A URL is used for identifying but<br>
+                    also retrieving online resources. Below an image of Facebook&apos;s URL with the HTTPS<br> 
+                    protocol at the start.
+                </p>
+                <!--Display an image of facebooks URL in three differnt sizes-->
+                <picture class="image">
+                    <source media="(max-width:600px)" srcset="./media/facebookURL400.png"> <!--400px to 600px, for small phones-->
+                    <source media="(max-width:800px)" srcset="./media/facebookURL600.png"> <!--601px to 800px, for narrow windows-->
+                    <source media="(min-width:801px)" srcset="./media/facebookURL800.png"> <!--801px and more, for 1080p monitors-->
+                    <img src="./media/facebookURL800.png" id="facebook_url" alt="An example of an HTTPS protocol at the start of facebook's URL.">
+                </picture>              
+                <h2>What is a Protocol?</h2>
+                <p>
+                    A protocol defines the communication mechanism to retrieve the resource such as a webpage.<br> 
+                    The communication would consist of messages being sent back and forth between a server and<br>
+                    a client. The mechanism would be how the client and server would handle the messages.
+                </p>
+                <h2>What does HTTP and HTTPS stand for?</h2>
+                <p>
+                    HTTP stands for "Hyper Text Transfer Protocol" and HTTPS stands for the same thing, but the<br>
+                    “S” stands for "Secure". The term “Hyper Text” is used to refer to a document that contains<br>
+                    hyperlinks to navigate around it, this is also what a website is.
+                </p>
+                <h2>HTTP vs HTTPS</h2>
+                <p>
+                    HTTPS uses encryption and validation techniques when the server and client are communicating.<br>
+                    The most popular way it does this does this by obtaining a Transport Layer Security (TLS) certificate.<br>
+                    <span class="link">
+                        <a href="https://en.wikipedia.org/wiki/HTTPS">Click here</a>
+                    </span>
+                     for more information about TLS certificates.
+                </p>
+                <p>
+                    HTTP does not use encryption when transmitting data, therefor it is visible  to anyone monitoring<br>
+                    the connection. Almost all web pages use HTTPS, the ones that use HTTP are public webpages that<br>
+                    contain no sensitive information. If your using chrome, you will see a Not Secure statement before<br>
+                    the URL if the website is using HTTP. You should avoid entering any sensitive information if you<br>
+                    see that statement. An example is shown below.
+                </p>
+                <!--Display an image of an insecure HTTP URL in three differnt sizes-->
+                <picture class="image">
+                    <source media="(max-width:600px)" srcset="./media/insecureConnection400.png"> <!--400px to 600px, for small phones-->
+                    <source media="(max-width:800px)" srcset="./media/insecureConnection600.png"> <!--601px to 800px, for narrow windows-->
+                    <source media="(min-width:801px)" srcset="./media/insecureConnection800.png"> <!--801px and more, for 1080p monitors-->
+                    <img src="./media/insecureConnection800.png" id="insecureConnection_url" alt="An example of a Not Secure statement on an HTTP webpage.">
+                </picture>    
+                <h2>The Client and Server</h2>
+                <p>
+                    For our purposes a client is a web browser running on a device. This can be a windows laptop running<br>
+                     google chrome. A Server is the device from where the pages being browsed are stored. This could be<br>
+                     a windows laptop, but most likely is a desktop computer designed to store and process lots of data,<br>
+                     the computer may also be running Linux instead of windows. HTTP or HTTPS is the method of communication<br>
+                     between the client and the server.
+                </p>
+                <h3>
+                    Navigation
+                </h3>
+                <p>
+                    <span style="color:white">[Page 1]</span>
+                     - 
+                    <a href="./html/page2.html">[Page 2]</a>
+                     - 
+                    <a href="./html/page3.html">[Page 3]</a>
+                     - 
+                    <a href="./html/page4.html">[Page 4]</a>
+                </p>
+            </div>
+            <div class="left_pannel"></div>
+            <div class="right_pannel"></div>
+        </div>
+    </body>
+</html>
